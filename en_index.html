@@ -12,82 +12,75 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            line-height: 1.5;
-            font-size: 14px;
-            color: #333;
+            line-height: 1.4;
+            font-size: 13px;
         }
         .cv-container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 25px 40px;
+            padding: 15px 30px;
             background: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+            margin-top: 10px;
+            margin-bottom: 5px;
         }
         h1 {
-            font-size: 2.2em;
+            font-size: 1.5em;
             text-align: center;
-            margin-bottom: 5px;
-            color: #000;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+        .subtitle-main {
+            font-size: 0.95em;
+            text-align: center;
+            margin: 0;
+            color: #555;
+            font-weight: 600;
         }
         h2 {
-            font-size: 1.25em;
-            border-bottom: 1px solid #000;
-            padding-bottom: 3px;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            color: #000;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 2px;
+            font-size: 1.15em;
+            margin-top: 12px;
         }
         h3 {
-            font-size: 1.05em;
-            margin-top: 0;
-            margin-bottom: 5px;
-            color: #000;
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+            font-size: 0.95em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1px;
+            margin-top: 8px;
         }
         .contact-info {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 0.9em;
-            color: #555;
+            text-align: center; /* 🔥 Ligne maintenant parfaitement centrée */
+            margin: 5px 0 10px 0;
+            font-size: 0.85em;
         }
         .contact-info i {
             margin-right: 4px;
-            color: #000;
-        }
-        .experience-item {
-            margin-bottom: 20px;
-        }
-        .job-title {
-            font-weight: 600;
-        }
-        .date {
-            font-weight: normal;
-            font-size: 0.9em;
             color: #666;
         }
         ul {
-            padding-left: 18px;
-            margin-top: 5px;
-            margin-bottom: 10px;
+            padding-left: 15px;
+            margin-top: 3px;
+            margin-bottom: 5px;
         }
         li {
-            margin-bottom: 5px;
-            text-align: justify;
-            font-size: 0.92em;
+            margin-bottom: 3px;
+            font-size: 0.85em;
         }
         p {
-            margin: 0 0 8px 0;
-            font-size: 0.92em;
+            margin: 0 0 5px 0;
+            font-size: 0.85em;
             text-align: justify;
         }
-        strong {
-            color: #000;
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         .btn-container {
             position: fixed;
@@ -96,86 +89,105 @@
             z-index: 1000;
         }
         .btn {
-            background-color: #000;
+            background-color: #007bff;
             color: #fff;
             border: none;
             padding: 10px 15px;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 0.9em;
             font-weight: 600;
         }
+        
+        /* Contraintes d'impression A4 strictes sur une seule page */
         @media print {
-            body { background: white; }
-            .cv-container { box-shadow: none; margin: 0; padding: 10px 20px; width: 100%; }
-            .btn-container { display: none; }
-            h2 { margin-top: 20px; }
-            html, body { height: 99%; overflow: hidden; }
+            @page {
+                size: A4;
+                margin: 8mm 12mm 8mm 12mm;
+            }
+            body {
+                background: white;
+                font-size: 11.5px;
+                line-height: 1.35;
+            }
+            .cv-container {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                page-break-inside: avoid;
+            }
+            .btn-container {
+                display: none;
+            }
+            h1 { margin-top: 0; font-size: 1.4em; }
+            h2 { margin-top: 10px; margin-bottom: 5px; }
+            h3 { margin-top: 8px; margin-bottom: 3px; }
+            ul { margin-bottom: 3px; }
+            li { margin-bottom: 2px; }
         }
     </style>
 </head>
 <body>
     <div id="cv-content" class="cv-container">
         <h1>Papa Ibrahima FAYE</h1>
+        <p class="subtitle-main">Senior Software Engineer</p>
         <p class="contact-info">
-            <i class="fas fa-map-marker-alt"></i> France | 
+            <i class="fas fa-home"></i> France | 
             <i class="fas fa-phone"></i> +33 6 24 53 54 66 | 
             <i class="fas fa-envelope"></i> papa.ibrahima.faye@gmail.com | 
-            <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/pibrahimafaye" style="color: #000; text-decoration: none; font-weight: 600;">LinkedIn</a>
+            <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/pibrahimafaye">LinkedIn</a>
         </p>
 
         <h2>Professional Summary</h2>
-        <p>Versatile and innovative Engineer specializing in robotics and critical embedded systems. Extensive expertise across the entire development lifecycle, from software architecture to complex system integration, ensuring high performance and reliability. Highly proficient in <strong>Modern C++, Python, and .NET Core</strong>, systematically applying <strong>Test-Driven Development (TDD)</strong> and adhering to <strong>isocpp CppCoreGuidelines</strong> to deliver clean, maintainable, and secure code in demanding environments.</p>
+        <p>Versatile and innovative Engineer specializing in robotics and critical embedded systems across the entire development lifecycle. Highly proficient in Modern C++, Python, and .NET Core under strict <strong>TDD cycles</strong>. Adhering to <strong>SOLID design principles</strong> and <strong>isocpp CppCoreGuidelines</strong>, I deliver clean, maintainable, and secure code in demanding environments.</p>
         
         <h2>Professional Experience</h2>
-        
-        <div class="experience-item">
-            <h3><span class="job-title">UAV Software Engineer — Exail Robotics</span> <span class="date">Jan. 2022 / Present</span></h3>
-            <p><em>Development of the T18 Autonomous Underwater Vehicle (AUV) for the BENL mine countermeasures program</em></p>
-            <ul>
-                <li><strong>Real-Time Sonar Integration (UMISAS):</strong> Designed and implemented the real-time acoustic data processing pipeline. Optimized transmission bandwidth (Radio/Satellite) using data replication strategies to enable seamless real-time sonar analysis under constrained bitrates.</li>
-                <li><strong>Autonomous Mission Management:</strong> Developed the Command Headquarters (HQ) mission reception interface. Implémented data processing and decision-making algorithms for dynamic mission parameter modification and execution by the core command engine.</li>
-                <li><strong>Safety-Critical Systems:</strong> Architected the vehicle's safety matrix: system monitoring, critical fault detection, and automated execution of safety and failsafe protocols.</li>
-                <li><strong>System Interoperability:</strong> Spearheaded the software integration and synchronization of the T18 drone with naval and land-based third-party systems within the global program ecosystem.</li>
-                <li><strong>Software Quality Assurance:</strong> Enforced rigorous TDD practices (C++/Python) and authored Software Design Documents (SDD) compliant with defense sector reliability standards.</li>
-            </ul>
-        </div>
+        <h3><strong>UAV Software Engineer</strong> — Exail Robotics - Jan. 2022 / Present</h3>
+        <p>Development of the T18 Autonomous Underwater Vehicle (AUV) for the BENL mine countermeasures program</p>
+        <ul>
+            <li><strong>Real-Time Sonar Integration (UMISAS):</strong> Designed and implemented the real-time acoustic data processing pipeline. Optimized transmission bandwidth (Radio/Satellite) using data replication strategies to enable seamless real-time sonar analysis under constrained bitrates.</li>
+            <li><strong>Autonomous Mission Management:</strong> Developed the Command Headquarters mission reception interface. Implemented data processing and decision-making algorithms for dynamic mission parameter modification and execution by the core command engine.</li>
+            <li><strong>Safety-Critical Systems:</strong> Architected the vehicle's safety matrix: system monitoring, critical fault detection, and automated execution of safety and failsafe protocols.</li>
+            <li><strong>System Interoperability:</strong> Spearheaded the software integration and synchronization of the T18 drone with naval and land-based third-party systems within the global program ecosystem.</li>
+            <li><strong>Software Quality Assurance:</strong> Enforced rigorous TDD practices (C++/Python) and authored Software Design Documents (SDD) compliant with defense sector reliability standards.</li>
+        </ul>
 
-        <div class="experience-item">
-            <h3><span class="job-title">Software Engineer — Tuito SAS</span> <span class="date">Jun. 2019 / Jan. 2022</span></h3>
-            <p><em>Architecture and development of a voice-controlled connected hospital room</em></p>
-            <ul>
-                <li><strong>Data Streaming:</strong> Developed a high-performance streaming interface between voice capture modules and the AI backend server using gRPC server streaming.</li>
-                <li><strong>IoT Ecosystem:</strong> Designed and deployed REST APIs to manage and control medical and home automation devices (smart beds, blinds, emergency calls).</li>
-                <li><strong>Embedded Connectivity:</strong> Developed low-level hardware interfaces on ESP32 microcontrollers ensuring Bluetooth Low Energy (BLE) communication with IoT sensors.</li>
-            </ul>
-        </div>
+        <h3><strong>Software Engineer</strong> — Tuito SAS - Jun. 2019 / Jan. 2022</h3>
+        <p>Architecture and development of a voice-controlled connected hospital room</p>
+        <ul>
+            <li><strong>Data Streaming:</strong> Developed a high-performance streaming interface between voice capture modules and the AI backend server using gRPC server streaming.</li>
+            <li><strong>IoT Ecosystem:</strong> Designed and deployed REST APIs to manage and control medical and home automation devices (smart beds, blinds, emergency calls).</li>
+            <li><strong>Embedded Connectivity:</strong> Developed low-level hardware interfaces on ESP32 microcontrollers ensuring Bluetooth Low Energy (BLE) communication with IoT sensors.</li>
+        </ul>
 
-        <div class="experience-item">
-            <h3><span class="job-title">Robotics Engineer — Ciscrea</span> <span class="date">Jan. 2017 / Jan. 2019</span></h3>
-            <p><em>Development of autonomous surface vessels (ASVs) for pipeline inspection</em></p>
-            <ul>
-                <li><strong>Sensor Fusion:</strong> Integrated and synchronized real-time heterogeneous data streams (Sonar, Lidar, Cameras, gas sensors) for autonomous navigation in confined environments.</li>
-                <li><strong>3D Mapping:</strong> Implemented visual and laser SLAM algorithms via <em>rtabmap_ros</em>, achieving a <strong>2 cm</strong> range precision for high-fidelity pipeline reconstruction.</li>
-                <li><strong>Data Analytics:</strong> Developed volume calculation algorithms (trapezoidal rule) to estimate sediment accumulation and debris volume accurately.</li>
-                <li><strong>Operational Safety:</strong> Built a critical monitoring system for explosive gas detection with automated triggers for safety mitigation protocols.</li>
-            </ul>
-        </div>
+        <h3><strong>Robotics Engineer</strong> — Ciscrea - Jan. 2017 / Jan. 2019</h3>
+        <p>Development of autonomous surface vessels (ASVs) for pipeline inspection</p>
+        <ul>
+            <li><strong>Sensor Fusion:</strong> Integrated and synchronized real-time heterogeneous data streams (Sonar, Lidar, Cameras, gas sensors) for autonomous navigation in confined environments.</li>
+            <li><strong>3D Mapping:</strong> Implemented visual and laser SLAM algorithms via <em>rtabmap_ros</em>, achieving a <strong>2 cm</strong> range precision for high-fidelity pipeline reconstruction.</li>
+            <li><strong>Data Analytics:</strong> Developed volume calculation algorithms (trapezoidal rule) to estimate sediment accumulation and debris volume accurately.</li>
+            <li><strong>Operational Safety:</strong> Built a critical monitoring system for explosive gas detection with automated triggers for safety mitigation protocols.</li>
+        </ul>
 
         <h2>Education</h2>
-        <p><strong>2018: MOOC Autonomous Robotics Command & Guidance</strong> — ENSTA Bretagne<br>
-           <strong>2016: MOOC Kalman Filtering: System Linearization via EKF</strong> — ENSTA Bretagne<br>
-           <strong>2015: Master’s Degree in Robotics</strong> — Université Montpellier 2</p>
+        <ul>
+            <li><strong>2018: MOOC Autonomous Robotics Command & Guidance</strong> - ENSTA Bretagne</li>
+            <li><strong>2016: MOOC Kalman Filtering: System Linearization via EKF</strong> - ENSTA Bretagne</li>
+            <li><strong>2015: Master’s Degree in Robotics</strong> - Université Montpellier 2</li>
+        </ul>
 
-        <h2>Skills & Languages</h2>
-        <p><strong>Robotics:</strong> ROS2, ROS, SLAM (KF, EKF, AMCL), Path Planning, 3D Modeling (Gazebo, Webots)<br>
-           <strong>Software Engineering:</strong> C, Modern C++ (CppCoreGuidelines),cmake Python, .NetCore, TDD, Architecture (onion, microservice)<br>
-           <strong>Systems & Tools:</strong> Git, Docker, Podman, Kubernetes, conan, Linux, MongoDB, gRPC, MQTT, Kafka<br>
-           <strong>Languages:</strong> French, English (Professional Working Proficiency)</p>
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Robotics</strong> : ROS2, ROS, SLAM: Kalman (KF, EKF) + AMCL (particle filter), Path Planning, 3D Modeling: Gazebo, Webots</li>
+            <li><strong>Software Engineering</strong> : C, Modern C++, cmake, conan, Python, .NetCore, Architecture (onion, microservices)</li>
+            <li><strong>Systems & Tools</strong> : Git, Docker, Podman, Linux, Kubernetes, MongoDB, SQL, gRPC, MQTT, Kafka, graphQL</li>
+            <li><strong>Methodology</strong> : TDD (Test Driven Development), Agile, Scrum, CI/CD</li>
+            <li><strong>Languages</strong> : French, English (Professional Working Proficiency)</li>
+        </ul>
     </div>
     
     <div class="btn-container">
-        <button class="btn" onclick="window.print()">📄 Export PDF (A4)</button>
+        <button class="btn" onclick="window.print()">📄 Export PDF</button>
     </div>
 </body>
 </html>
