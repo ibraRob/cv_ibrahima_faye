@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Papa Ibrahima FAYE</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Resume - Papa Ibrahima FAYE</title>
+
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            line-height: 1.4;
-            font-size: 13px;
+            line-height: 1.6;
+            font-size: 14px;
         }
+
         .cv-container {
             max-width: 800px;
             margin: 0 auto;
@@ -23,71 +28,71 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
+
         h1, h2, h3 {
             color: #333;
-            margin-top: 10px;
-            margin-bottom: 5px;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
+
         h1 {
-            font-size: 1.5em;
+            font-size: 2em;
             text-align: center;
-            margin-bottom: 2px;
         }
-        .subtitle-main {
-            font-size: 0.95em;
-            text-align: center;
-            margin: 0;
-            color: #555;
-            font-weight: 600;
-        }
+
         h2 {
             border-bottom: 2px solid #ddd;
-            padding-bottom: 2px;
-            font-size: 1.15em;
-            margin-top: 12px;
+            padding-bottom: 5px;
         }
+
         h3 {
-            font-size: 0.95em;
+            font-size: 1em;
             border-bottom: 1px solid #ddd;
-            padding-bottom: 1px;
-            margin-top: 8px;
         }
+
         .contact-info {
-            text-align: center; /* 🔥 Ligne maintenant parfaitement centrée */
-            margin: 5px 0 10px 0;
-            font-size: 0.85em;
+            text-align: left;
+            margin: 10px 0 20px 0;
+            font-size: 0.95em;
         }
+
         .contact-info i {
-            margin-right: 4px;
+            margin-right: 5px;
             color: #666;
         }
+
         ul {
-            padding-left: 15px;
-            margin-top: 3px;
-            margin-bottom: 5px;
+            padding-left: 20px;
+            margin-bottom: 10px;
         }
+
         li {
-            margin-bottom: 3px;
-            font-size: 0.85em;
+            margin-bottom: 6px;
+            font-size: 0.9em;
         }
+
         p {
-            margin: 0 0 5px 0;
-            font-size: 0.85em;
+            margin: 0 0 10px 0;
+            font-size: 0.9em;
             text-align: justify;
         }
+
         a {
             color: #007bff;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .btn-container {
             position: fixed;
             bottom: 20px;
             right: 20px;
             z-index: 1000;
         }
+
         .btn {
             background-color: #007bff;
             color: #fff;
@@ -97,97 +102,299 @@
             cursor: pointer;
             font-weight: 600;
         }
-        
-        /* Contraintes d'impression A4 strictes sur une seule page */
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
         @media print {
-            @page {
-                size: A4;
-                margin: 8mm 12mm 8mm 12mm;
-            }
             body {
                 background: white;
-                font-size: 11.5px;
-                line-height: 1.35;
+                margin: 0;
+                padding: 0;
             }
+
             .cv-container {
                 box-shadow: none;
                 margin: 0;
-                padding: 0;
-                width: 100%;
+                padding: 10px 20px;
                 page-break-inside: avoid;
             }
+
             .btn-container {
                 display: none;
             }
-            h1 { margin-top: 0; font-size: 1.4em; }
-            h2 { margin-top: 10px; margin-bottom: 5px; }
-            h3 { margin-top: 8px; margin-bottom: 3px; }
-            ul { margin-bottom: 3px; }
-            li { margin-bottom: 2px; }
+
+            h2 {
+                page-break-before: avoid;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div id="cv-content" class="cv-container">
-        <h1>Papa Ibrahima FAYE</h1>
-        <p class="subtitle-main">Senior Software Engineer</p>
-        <p class="contact-info">
-            <i class="fas fa-home"></i> France | 
-            <i class="fas fa-phone"></i> +33 6 24 53 54 66 | 
-            <i class="fas fa-envelope"></i> papa.ibrahima.faye@gmail.com | 
-            <i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/pibrahimafaye">LinkedIn</a>
-        </p>
 
-        <h2>Professional Summary</h2>
-        <p>Versatile and innovative Engineer specializing in robotics and critical embedded systems across the entire development lifecycle. Highly proficient in Modern C++, Python, and .NET Core under strict <strong>TDD cycles</strong>. Adhering to <strong>SOLID design principles</strong> and <strong>isocpp CppCoreGuidelines</strong>, I deliver clean, maintainable, and secure code in demanding environments.</p>
-        
-        <h2>Professional Experience</h2>
-        <h3><strong>UAV Software Engineer</strong> — Exail Robotics - Jan. 2022 / Present</h3>
-        <p>Development of the T18 Autonomous Underwater Vehicle (AUV) for the BENL mine countermeasures program</p>
-        <ul>
-            <li><strong>Real-Time Sonar Integration (UMISAS):</strong> Designed and implemented the real-time acoustic data processing pipeline. Optimized transmission bandwidth (Radio/Satellite) using data replication strategies to enable seamless real-time sonar analysis under constrained bitrates.</li>
-            <li><strong>Autonomous Mission Management:</strong> Developed the Command Headquarters mission reception interface. Implemented data processing and decision-making algorithms for dynamic mission parameter modification and execution by the core command engine.</li>
-            <li><strong>Safety-Critical Systems:</strong> Architected the vehicle's safety matrix: system monitoring, critical fault detection, and automated execution of safety and failsafe protocols.</li>
-            <li><strong>System Interoperability:</strong> Spearheaded the software integration and synchronization of the T18 drone with naval and land-based third-party systems within the global program ecosystem.</li>
-            <li><strong>Software Quality Assurance:</strong> Enforced rigorous TDD practices (C++/Python) and authored Software Design Documents (SDD) compliant with defense sector reliability standards.</li>
-        </ul>
+<div id="cv-content" class="cv-container">
 
-        <h3><strong>Software Engineer</strong> — Tuito SAS - Jun. 2019 / Jan. 2022</h3>
-        <p>Architecture and development of a voice-controlled connected hospital room</p>
-        <ul>
-            <li><strong>Data Streaming:</strong> Developed a high-performance streaming interface between voice capture modules and the AI backend server using gRPC server streaming.</li>
-            <li><strong>IoT Ecosystem:</strong> Designed and deployed REST APIs to manage and control medical and home automation devices (smart beds, blinds, emergency calls).</li>
-            <li><strong>Embedded Connectivity:</strong> Developed low-level hardware interfaces on ESP32 microcontrollers ensuring Bluetooth Low Energy (BLE) communication with IoT sensors.</li>
-        </ul>
+    <h1>Papa Ibrahima FAYE</h1>
 
-        <h3><strong>Robotics Engineer</strong> — Ciscrea - Jan. 2017 / Jan. 2019</h3>
-        <p>Development of autonomous surface vessels (ASVs) for pipeline inspection</p>
-        <ul>
-            <li><strong>Sensor Fusion:</strong> Integrated and synchronized real-time heterogeneous data streams (Sonar, Lidar, Cameras, gas sensors) for autonomous navigation in confined environments.</li>
-            <li><strong>3D Mapping:</strong> Implemented visual and laser SLAM algorithms via <em>rtabmap_ros</em>, achieving a <strong>2 cm</strong> range precision for high-fidelity pipeline reconstruction.</li>
-            <li><strong>Data Analytics:</strong> Developed volume calculation algorithms (trapezoidal rule) to estimate sediment accumulation and debris volume accurately.</li>
-            <li><strong>Operational Safety:</strong> Built a critical monitoring system for explosive gas detection with automated triggers for safety mitigation protocols.</li>
-        </ul>
+    <h3>
+        Robotics & Software Engineer —
+        Embedded Systems | Software Architecture | Integration
+    </h3>
 
-        <h2>Education</h2>
-        <ul>
-            <li><strong>2018: MOOC Autonomous Robotics Command & Guidance</strong> - ENSTA Bretagne</li>
-            <li><strong>2016: MOOC Kalman Filtering: System Linearization via EKF</strong> - ENSTA Bretagne</li>
-            <li><strong>2015: Master’s Degree in Robotics</strong> - Université Montpellier 2</li>
-        </ul>
+    <p class="contact-info">
+        <i class="fas fa-home"></i> La Valette du Var, France |
+        <i class="fas fa-phone"></i> 06 24 53 54 66 |
+        <i class="fas fa-envelope"></i> papa.ibrahima.faye@gmail.com |
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/pibrahimafaye">LinkedIn</a>
+    </p>
 
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Robotics</strong> : ROS2, ROS, SLAM: Kalman (KF, EKF) + AMCL (particle filter), Path Planning, 3D Modeling: Gazebo, Webots</li>
-            <li><strong>Software Engineering</strong> : C, Modern C++, cmake, conan, Python, .NetCore, Architecture (onion, microservices)</li>
-            <li><strong>Systems & Tools</strong> : Git, Docker, Podman, Linux, Kubernetes, MongoDB, SQL, gRPC, MQTT, Kafka, graphQL</li>
-            <li><strong>Methodology</strong> : TDD (Test Driven Development), Agile, Scrum, CI/CD</li>
-            <li><strong>Languages</strong> : French, English (Professional Working Proficiency)</li>
-        </ul>
-    </div>
-    
-    <div class="btn-container">
-        <button class="btn" onclick="window.print()">📄 Export PDF</button>
-    </div>
+    <h2>Profile</h2>
+
+    <p>
+        Engineer specializing in robotics, embedded systems and software development.
+        Expertise spanning the full development lifecycle, from software design to
+        integration into complex systems, with a strong focus on robustness,
+        performance and maintainability. Strong expertise in
+        <strong>C++, Python and .NET Core</strong>, with systematic application of
+        <strong>Test-Driven Development (TDD)</strong> in demanding engineering
+        environments.
+    </p>
+
+    <h2>Professional Experience</h2>
+
+    <!-- EXAIL -->
+
+    <h3>
+        <strong>Robotics & Software Engineer</strong>
+        — Exail Robotics - Jan. 2022 / Present
+    </h3>
+
+    <p>
+        <strong>AUV Software Architecture</strong>
+        — Aug. 2026 / Present
+    </p>
+
+    <ul>
+        <li>
+            <strong>Software Architecture:</strong>
+            Designed a modular ROS 2 software architecture for embedded AUV systems,
+            with clear separation of concerns between business logic, application
+            services, hardware adapters and infrastructure.
+            The architecture is currently being evaluated on two AUV types to validate
+            the reuse of shared software building blocks, with the objective of
+            extending it across Exail's AUV product range.
+        </li>
+
+        <li>
+            <strong>Modularity & Integration:</strong>
+            Defined software contracts and interfaces to decouple equipment from
+            implementation details, enabling hardware and driver components to be
+            integrated, replaced or evolved with minimal impact on the rest of
+            the system.
+        </li>
+
+        <li>
+            <strong>Software Industrialization:</strong>
+            Designed the CI/CD pipeline covering builds, automated testing,
+            code coverage, documentation, Debian packaging and ROS 2 release
+            management. Implemented versioning, assembly and validation processes
+            to produce reproducible software releases for each AUV type.
+        </li>
+
+        <li>
+            <strong>Validation & Simulation:</strong>
+            Developed a Gazebo-based simulation environment to validate software
+            interfaces, system behavior and architectural decisions prior to
+            integration on physical AUV platforms.
+        </li>
+    </ul>
+
+    <!-- T18 -->
+
+    <p>
+        <strong>T18 AUV Development — BENL Program</strong>
+        — Jan. 2022 / Jul. 2026
+    </p>
+
+    <ul>
+        <li>
+            <strong>Real-Time UMISAS Sonar:</strong>
+            Designed and developed the real-time acoustic data acquisition,
+            processing and transmission pipeline.
+            Optimized Radio/Satellite communications to enable sonar analysis
+            under bandwidth-constrained conditions.
+        </li>
+
+        <li>
+            <strong>Autonomous Mission Management:</strong>
+            Designed the command reception and processing chain, enabling
+            relevance analysis and dynamic adaptation of mission parameters
+            during execution.
+        </li>
+
+        <li>
+            <strong>Functional Safety:</strong>
+            Designed the AUV safety matrix for system-state monitoring,
+            critical fault detection and automatic triggering of
+            fail-safe modes.
+        </li>
+
+        <li>
+            <strong>Integration & Interoperability:</strong>
+            Integrated the T18 software into the BENL program ecosystem and
+            implemented communications with other naval and land-based systems.
+        </li>
+
+        <li>
+            <strong>Software Quality:</strong>
+            Developed C++ and Python software using a TDD approach and authored
+            the associated technical design specifications.
+        </li>
+    </ul>
+
+    <!-- TUITO -->
+
+    <h3>
+        <strong>Software Engineer</strong>
+        — Tuito SAS - Jun. 2019 / Jan. 2022
+    </h3>
+
+    <p>
+        Development of a connected hospital room controlled through a voice assistant
+    </p>
+
+    <ul>
+        <li>
+            <strong>Data Streaming:</strong>
+            Designed and developed a gRPC streaming pipeline between the
+            voice-capture system and the AI server.
+        </li>
+
+        <li>
+            <strong>IoT Ecosystem:</strong>
+            Designed REST APIs for the integration and control of connected
+            medical equipment, including hospital beds, room automation
+            and emergency call systems.
+        </li>
+
+        <li>
+            <strong>Embedded Connectivity:</strong>
+            Developed the ESP32 hardware interface providing Bluetooth Low Energy
+            (BLE) communication with IoT sensors.
+        </li>
+    </ul>
+
+    <!-- CISCREA -->
+
+    <h3>
+        <strong>Robotics Engineer</strong>
+        — Ciscrea - Jan. 2017 / Jan. 2019
+    </h3>
+
+    <p>
+        Development of autonomous robotic platforms for pipeline inspection
+    </p>
+
+    <ul>
+        <li>
+            <strong>Multi-Sensor Integration:</strong>
+            Integrated and synchronized real-time Sonar, LiDAR, camera and
+            gas-sensor data for perception and autonomous navigation
+            in confined environments.
+        </li>
+
+        <li>
+            <strong>3D Mapping:</strong>
+            Implemented a visual and LiDAR SLAM pipeline under ROS using
+            <em>rtabmap_ros</em>, enabling 3D reconstruction of inspected pipelines.
+        </li>
+
+        <li>
+            <strong>Data Analysis:</strong>
+            Developed volumetric analysis algorithms using the trapezoidal method
+            to estimate sediment accumulation and waste volumes.
+        </li>
+
+        <li>
+            <strong>Operational Safety:</strong>
+            Developed a gas-concentration monitoring system providing critical
+            condition detection and automatic triggering of safety procedures.
+        </li>
+    </ul>
+
+    <h2>Education</h2>
+
+    <ul>
+        <li>
+            <strong>MOOC — Mobile Robot Control & Guidance</strong>
+            - ENSTA Bretagne - 2018
+        </li>
+
+        <li>
+            <strong>MOOC — Kalman Filtering: System Linearization using EKF</strong>
+            - ENSTA Bretagne - 2016
+        </li>
+
+        <li>
+            <strong>Master's Degree in Robotics</strong>
+            - University of Montpellier 2 - 2015
+        </li>
+    </ul>
+
+    <h2>Technical Skills</h2>
+
+    <ul>
+        <li>
+            <strong>Robotics & Embedded Systems:</strong>
+            ROS 2, ROS, sensor/actuator integration, Lifecycle Nodes,
+            SLAM, Kalman filtering (KF, EKF), AMCL, Path Planning,
+            Gazebo, Webots
+        </li>
+
+        <li>
+            <strong>Software Architecture & Integration:</strong>
+            modular architectures, Onion Architecture, software interfaces
+            & contracts, drivers/adapters, system integration, API design
+        </li>
+
+        <li>
+            <strong>Software Development:</strong>
+            C, C++, Python, .NET Core, CMake
+        </li>
+
+        <li>
+            <strong>CI/CD & Software Industrialization:</strong>
+            Jenkins, Git, Docker, Podman, Conan, Debian packaging,
+            build, testing, code coverage, documentation and release pipelines
+        </li>
+
+        <li>
+            <strong>Quality & Methodologies:</strong>
+            TDD, unit & integration testing, Agile, Scrum,
+            technical documentation
+        </li>
+
+        <li>
+            <strong>Systems & Communication:</strong>
+            Linux, gRPC, REST, MongoDB
+        </li>
+
+        <li>
+            <strong>Languages:</strong>
+            French (native), English (professional working proficiency)
+        </li>
+    </ul>
+
+</div>
+
+<div class="btn-container">
+    <button class="btn" onclick="window.print()">
+        📄 Print / Save as PDF
+    </button>
+</div>
+
 </body>
 </html>
